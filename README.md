@@ -31,6 +31,8 @@ TMP0 SRC2 1
 ### SUBLEQ Microcode
 The SUBLEQ microcode in `microcode` can be "compiled" to header files using the Emacs package in `subleq-mode`.
 
+Most of the microcode procedures work correctly, however we found some bugs using [formal verification](https://github.com/ics-jku/goldcrest-microcode-verification).
+
 ## Installation
 To install Goldcrest you need `a c++ compiler`, `cmake`, `boost-iostreams`, `boost-log`, and `boost-program-options`.
 
