@@ -2,7 +2,7 @@ mkfile_path := $(abspath $(lastword $(MAKEFILE_LIST)))
 current_dir := $(notdir $(patsubst %/,%,$(dir $(mkfile_path))))
 
 all : main.c
-	riscv32-uinknown-elf-gcc -o $(current_dir) main.c bootstrap.S -march=rv32i -mabi=ilp32 -nostartfiles -Wl,--no-relax
+	riscv32-unknown-elf-gcc -o $(current_dir) main.c bootstrap.S -march=rv32i -mabi=ilp32 -nostartfiles -Wl,--no-relax
 	mv $(current_dir) ../bin/
 
 dump-elf: all
